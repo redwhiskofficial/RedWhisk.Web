@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar.jsx";
-import Hero from "./components/herosection.jsx";
+import Hero from "./components/Herosection.jsx";
 import Video from "@/components/video";
 import AboutUs from "./components/AboutUs.jsx";
 import Footer from "./components/Footer.jsx";
