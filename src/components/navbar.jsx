@@ -73,6 +73,13 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <a
+              href="#contact"
+              className="block w-full px-4 py-2 text-lg font-medium text-white bg-red-600 hover:bg-red-700 rounded-md text-center mt-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact us
+            </a>
           </MobileNavMenu>
         </MobileNav>
       </NavbarComponent>
