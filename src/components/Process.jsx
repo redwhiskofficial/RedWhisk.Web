@@ -6,17 +6,17 @@ const Process = () => {
         {
             number: "01",
             title: "Discovery Call",
-            description: "A discovery call is a brief conversation to understand a client's needs, goals, and challenges before offering a tailored solution."
+            description: "Once your call is booked, we'll host a discovery session to understand your vision, requirements, and brand direction in detail."
         },
         {
             number: "02",
             title: "Onboarding Call",
-            description: "Our team edits and you can request revisions to perfect it."
+            description: "After you book, we'll hop on an onboarding call to discuss your needs and issue the agreement and invoice to kick things off."
         },
         {
             number: "03",
-            title: "Final Delivery",
-            description: "Receive the final video with all necessary adjustments."
+            title: "Personalized Dashboard Access",
+            description: "Enjoy seamless dashboard access with real-time project updates, file management, communication, and delivery tracking—all in one organized workspace."
         }
     ];
 
@@ -49,14 +49,8 @@ const Process = () => {
                         viewport={{ once: true }}
                         className="flex flex-col"
                     >
-                        {/* Label */}
-                        <div className="flex items-center gap-2 mb-6">
-                            <div className="w-2 h-2 rounded-full bg-red-500" />
-                            <span className="text-neutral-400 font-medium text-sm">Process</span>
-                        </div>
-
                         {/* Heading */}
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-neutral-200 mb-16">
                             Client Onboarding
                         </h2>
 

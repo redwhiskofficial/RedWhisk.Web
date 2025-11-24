@@ -38,13 +38,8 @@ const Testimonials = () => {
     return (
         <div className="w-full bg-black py-20 px-4 overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
                 <div className="text-center mb-16">
-                    <div className="flex items-center justify-center gap-2 mb-6">
-                        <div className="w-2 h-2 rounded-full bg-red-500" />
-                        <span className="text-neutral-400 font-medium text-sm">Testimonial</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white max-w-3xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-bold text-neutral-200 max-w-3xl mx-auto">
                         What our premium clients are saying about us
                     </h2>
                 </div>

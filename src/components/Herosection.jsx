@@ -9,7 +9,7 @@ const Herosection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-200 to-neutral-500 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight"
+        className="text-neutral-200 text-center text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight"
       >
         Content that feels premium, <br /> performs even better.
       </motion.h2>

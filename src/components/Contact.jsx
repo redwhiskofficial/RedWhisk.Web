@@ -7,11 +7,7 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <div className="flex items-center justify-center gap-2 mb-6">
-                        <div className="w-2 h-2 rounded-full bg-red-500" />
-                        <span className="text-neutral-400 font-medium text-sm">Contact</span>
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-white max-w-4xl mx-auto leading-tight">
+                    <h2 className="text-4xl md:text-6xl font-bold text-neutral-200 max-w-4xl mx-auto leading-tight">
                         Contact us for amazing video editing projects
                     </h2>
                 </div>

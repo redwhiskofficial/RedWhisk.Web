@@ -11,23 +11,12 @@ const AboutUs = () => {
         fill="white"
       />
       <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="flex items-center justify-center gap-2 mb-8"
-        >
-          <div className="w-2 h-2 rounded-full bg-red-500" />
-          <span className="text-neutral-300 font-medium">About us</span>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 bg-opacity-50 max-w-5xl mx-auto leading-tight"
+          className="text-4xl md:text-7xl font-bold text-center text-neutral-200 bg-opacity-50 max-w-5xl mx-auto leading-tight mb-8"
         >
           Boost your content{" "}
           <span className="inline-flex items-center justify-center px-4 py-1 rounded-full bg-neutral-100 text-black text-xl md:text-3xl align-middle mx-2">

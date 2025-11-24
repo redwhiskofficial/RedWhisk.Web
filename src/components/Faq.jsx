@@ -80,12 +80,8 @@ const Faq = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
                     {/* Left Side - Header & CTA */}
                     <div className="lg:col-span-5 space-y-8">
-                        <div>
-                            <div className="flex items-center gap-2 mb-6">
-                                <div className="w-2 h-2 rounded-full bg-red-600" />
-                                <span className="text-neutral-400 font-medium text-sm uppercase tracking-wider">FAQ</span>
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        <div className="space-y-6">
+                            <h2 className="text-4xl md:text-5xl font-bold text-neutral-200 leading-tight">
                                 Frequently asked questions about us
                             </h2>
                         </div>

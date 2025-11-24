@@ -30,7 +30,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="col-span-1 space-y-6">
-              <h3 className="text-white font-medium text-lg">Quick Links</h3>
+              <h3 className="text-neutral-200 font-medium text-lg">Quick Links</h3>
               <ul className="space-y-4">
                 {['About us', 'Work', 'Services', 'How it work', 'Contact us', 'Error 404'].map((item) => (
                   <li key={item}>
@@ -42,7 +42,7 @@ const Footer = () => {
 
             {/* Contact */}
             <div className="col-span-1 space-y-6">
-              <h3 className="text-white font-medium text-lg">Contact</h3>
+              <h3 className="text-neutral-200 font-medium text-lg">Contact</h3>
               <ul className="space-y-4">
                 <li>
                   <a href="mailto:mediaredwhisk@gmail.com" className="text-neutral-400 hover:text-white transition-colors">mediaredwhisk@gmail.com</a>
@@ -58,7 +58,7 @@ const Footer = () => {
 
             {/* Follow us */}
             <div className="col-span-1 space-y-6">
-              <h3 className="text-white font-medium text-lg">Follow us</h3>
+              <h3 className="text-neutral-200 font-medium text-lg">Follow us</h3>
               <ul className="space-y-4">
                 <li>
                   <a href="#" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
