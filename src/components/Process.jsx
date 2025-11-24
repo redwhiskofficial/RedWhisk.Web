@@ -21,7 +21,7 @@ const Process = () => {
     ];
 
     return (
-        <div className="w-full bg-black py-20 px-4">
+        <div id="process" className="w-full bg-black py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
                     {/* Left Side - Image */}

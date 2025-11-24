@@ -31,7 +31,7 @@ const faqs = [
     {
         question: "How do I get started?",
         answer:
-            "Simply click the 'Book an appointment' button or contact us through the form below to discuss your project requirements.",
+            "Simply click the 'Book a call' button or contact us through the form below to discuss your project requirements.",
     },
 ];
 
@@ -94,8 +94,8 @@ const Faq = () => {
                             <div className="relative z-10">
                                 <h3 className="text-xl font-semibold mb-2">Have a question?</h3>
                                 <p className="text-red-100 mb-6">Let's discuss it now!</p>
-                                <a href="#contact" className="inline-block bg-white text-red-600 px-6 py-3 rounded-full font-medium hover:bg-neutral-100 transition-colors">
-                                    Book an appointment
+                                <a href="#" onClick={(e) => { e.preventDefault(); window.Calendly.initPopupWidget({ url: 'https://calendly.com/redwhiskofficial/discovery-call' }); }} className="inline-block bg-white text-red-600 px-6 py-3 rounded-full font-medium hover:bg-neutral-100 transition-colors">
+                                    Book a call
                                 </a>
                             </div>
                             {/* Decorative circle */}

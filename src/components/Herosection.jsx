@@ -27,14 +27,14 @@ const Herosection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8"
+        className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8 relative z-50"
       >
-        <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-neutral-200 transition-colors">
+        <button onClick={() => window.Calendly.initPopupWidget({ url: 'https://calendly.com/redwhiskofficial/discovery-call' })} className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-neutral-200 transition-colors cursor-pointer relative z-50">
           Book a Call
         </button>
         <a
-          href="#"
-          className="text-neutral-300 font-medium hover:underline"
+          href="#process"
+          className="text-neutral-300 font-medium hover:underline hover:text-red-600 transition-all duration-300 relative z-50"
         >
           How it works
         </a>

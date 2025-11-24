@@ -140,7 +140,7 @@ const Work = () => {
   };
 
   return (
-    <div className="w-full pt-20 pb-20 bg-black text-white overflow-hidden relative">
+    <div id="work" className="w-full pt-20 pb-20 bg-black text-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 mb-20 flex items-center justify-center">
         <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
           work and projects
