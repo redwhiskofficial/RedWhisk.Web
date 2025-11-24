@@ -11,14 +11,16 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { IconSpiral } from "@tabler/icons-react";
 
-const EdwhiskLogo = () => {
+import { useScroll, useMotionValueEvent } from "motion/react";
+
+const EdwhiskLogo = ({ scrolled }) => {
   return (
     <a
       href="#"
       className="relative z-20 mr-4 flex items-center px-2 py-1 text-sm font-normal text-black"
     >
       <img src="/logo.PNG" alt="edWhisk Logo" className="h-14 w-14" />
-      <span className="text-3xl font-medium text-white -ml-3">
+      <span className={`text-3xl font-medium text-white -ml-3 transition-opacity duration-300 ${scrolled ? "hidden lg:block" : "block"}`}>
         edwhisk
       </span>
     </a>
@@ -27,6 +29,16 @@ const EdwhiskLogo = () => {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 20) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  });
 
   const navItems = [
     { name: "Home", link: "#home" },
@@ -37,9 +49,9 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <NavbarComponent className="fixed top-0 inset-x-0 mx-auto z-50">
+      <NavbarComponent className="relative lg:fixed top-0 inset-x-0 mx-auto z-50">
         <NavBody>
-          <EdwhiskLogo />
+          <EdwhiskLogo scrolled={scrolled} />
           <div className="hidden lg:flex flex-row items-center justify-center space-x-8">
             {navItems.map((item, idx) => (
               <a
@@ -60,7 +72,7 @@ const Navbar = () => {
         </NavBody>
         <MobileNav>
           <MobileNavHeader>
-            <EdwhiskLogo />
+            <EdwhiskLogo scrolled={scrolled} />
             <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
           </MobileNavHeader>
           <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)} className="bg-black border-neutral-800">
