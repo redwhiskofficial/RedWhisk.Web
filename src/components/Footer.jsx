@@ -82,7 +82,7 @@ const Footer = () => {
           {/* Giant Text */}
           <div className="relative w-full flex justify-center">
             <h1 className="text-[15vw] md:text-[18vw] font-bold text-red-600 leading-none tracking-tighter select-none pointer-events-none translate-y-[10%]">
-              redwhisk
+              Redwhisk
             </h1>
           </div>
         </div>

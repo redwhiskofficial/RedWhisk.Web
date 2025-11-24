@@ -86,7 +86,7 @@ const Faq = () => {
                             </h2>
                         </div>
 
-                        <div className="bg-red-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                        <div className="bg-[#B62222] rounded-3xl p-8 text-white relative overflow-hidden">
                             <div className="relative z-10">
                                 <h3 className="text-xl font-semibold mb-2">Have a question?</h3>
                                 <p className="text-red-100 mb-6">Let's discuss it now!</p>
