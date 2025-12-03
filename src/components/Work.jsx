@@ -59,10 +59,7 @@ const VideoCard = React.memo(({ card, index, hovered, setHovered }) => {
           {/* Optional top content */}
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="text-xl md:text-2xl font-medium text-white">
-            {card.title}
-          </div>
+        <div className="flex items-center justify-end">
           <button
             type="button"
             onClick={(e) => {
@@ -115,11 +112,16 @@ const Work = () => {
   // Triplicate the cards for infinite scrolling
   const infiniteCards = [...cards, ...cards, ...cards];
 
-  // Set initial scroll position to middle set
+  // Set initial scroll position to the first reel (index 1)
   React.useEffect(() => {
     if (carouselRef.current && !isScrolling.current) {
-      // Approximate center start
-      carouselRef.current.scrollLeft = 100;
+      // Find the first reel (index 1)
+      const reelIndex = 1;
+      const reelCard = carouselRef.current.children[reelIndex];
+
+      if (reelCard) {
+        reelCard.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'instant' });
+      }
     }
   }, [cards.length]);
 
