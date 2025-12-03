@@ -38,8 +38,9 @@ const Video = () => {
         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
 
         <button
+          type="button"
           onClick={togglePlay}
-          className="absolute bottom-6 left-6 z-20 flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-white hover:bg-white/30 transition-all"
+          className="absolute bottom-6 left-6 z-50 flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-white hover:bg-white/30 transition-all cursor-pointer"
         >
           {isPlaying ? (
             <>

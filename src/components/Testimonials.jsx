@@ -5,33 +5,34 @@ const Testimonials = () => {
     const testimonials = [
         {
             quote:
+                "They handled my vlog edits and thumbnails, and honestly, it changed everything.My content now looks sharp, smooth, and way more engaging.",
+            name: "James Symons",
+            title: "Ecom Brand Owner",
+        },
+        {
+            quote:
+                "Their editing took my podcast from good to outstanding.It truly felt like a complete game-changer.",
+            name: "Built From Scratch",
+            title: "Venture Capitalist",
+        },
+        {
+            quote:
                 "RedWhisk streamlined my workflow, handling content and brand deals so I can focus on gaming. A total game-changer!",
-            name: "John Smith",
-            title: "100x Views",
+            name: "Rishbah",
+            title: "Encore",
         },
         {
             quote:
-                "They nailed everything we needed and went above and beyond to bring our vision to life",
-            name: "Maxxz",
-            title: "100M+ Revenue",
+                "Redwhisk designed a stunning fitness thumbnail that boosted my click-through rates. Highly recommended!",
+            name: "Michael Morelli",
+            title: "morellifit",
         },
+
         {
             quote:
-                "Amazing service! They consistently deliver top-notch results and meet every requirement perfectly",
-            name: "Martin Guptil",
-            title: "1M+ Subscribers",
-        },
-        {
-            quote:
-                "Working with RedWhisk has been an absolute pleasure. Their attention to detail is unmatched.",
-            name: "Sarah Johnson",
-            title: "500K+ Followers",
-        },
-        {
-            quote:
-                "The quality of work and professionalism exceeded all my expectations. Highly recommended!",
-            name: "David Chen",
-            title: "2M+ Views",
+                "RedWhisk handles my content and collaborations, giving me more time to focus on teaching. Highly recommend!",
+            name: "Phyjeeics",
+            title: "Educator",
         },
     ];
 

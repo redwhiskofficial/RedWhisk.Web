@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <div className="max-w-7xl mx-auto px-8 py-10">
       <h2 className="text-3xl md:text-5xl font-bold text-center text-neutral-200 mb-16 max-w-4xl mx-auto">
-        What REDWHISK Offers You! 
+        What REDWHISK Offers You!
       </h2>
 
       <HoverEffect items={services} />
@@ -39,15 +39,15 @@ const services = [
     link: "#",
   },
   {
-    title: "Facebook Ads",
+    title: "Personalized Content Dashboard",
     description:
-      "Create and optimize video ads for better engagement and reach.",
+      "A sleek, data-driven dashboard that consolidates your brand and performance metrics into one streamlined visual interface.",
     link: "#",
   },
   {
-    title: "LinkedIn Videos",
+    title: "Content Manager",
     description:
-      "Craft professional videos for business growth and networking.",
+      "oversees planning, creating and optimizing engaging multimedia content to align with brand goals and audience growth.",
     link: "#",
   },
 ];

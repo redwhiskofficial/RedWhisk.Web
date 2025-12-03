@@ -29,7 +29,8 @@ const VideoCard = React.memo(({ card, index, hovered, setHovered }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "rounded-t-3xl rounded-b-2xl relative bg-neutral-900 overflow-hidden h-[25rem] md:h-[35rem] min-w-[18rem] md:min-w-[24rem] transition-all duration-300 ease-out border border-neutral-800 snap-center will-change-transform",
+        "rounded-t-3xl rounded-b-2xl relative bg-neutral-900 overflow-hidden h-[25rem] md:h-[35rem] transition-all duration-300 ease-out border border-neutral-800 snap-center will-change-transform",
+        card.aspectRatio === "landscape" ? "min-w-[85vw] md:min-w-[45rem]" : "min-w-[18rem] md:min-w-[24rem]",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98] opacity-50",
         hovered === index && "scale-110 z-10 shadow-2xl border-neutral-500"
       )}
@@ -62,7 +63,22 @@ const VideoCard = React.memo(({ card, index, hovered, setHovered }) => {
           <div className="text-xl md:text-2xl font-medium text-white">
             {card.title}
           </div>
-          <div className={cn("px-4 py-2 rounded-full bg-white/20 backdrop-blur-md transition-opacity duration-300 flex items-center gap-2", hovered === index ? "opacity-100" : "opacity-100")}>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              if (videoRef.current) {
+                if (isPlaying) {
+                  videoRef.current.pause();
+                  setIsPlaying(false);
+                } else {
+                  videoRef.current.play();
+                  setIsPlaying(true);
+                }
+              }
+            }}
+            className={cn("px-4 py-2 rounded-full bg-white/20 backdrop-blur-md transition-opacity duration-300 flex items-center gap-2 z-50 cursor-pointer hover:bg-white/30", hovered === index ? "opacity-100" : "opacity-100")}
+          >
             {isPlaying ? (
               <>
                 <IconPlayerPause className="w-4 h-4 text-white fill-current" />
@@ -74,7 +90,7 @@ const VideoCard = React.memo(({ card, index, hovered, setHovered }) => {
                 <span className="text-xs font-medium text-white">Play</span>
               </>
             )}
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -89,12 +105,11 @@ const Work = () => {
   const isScrolling = useRef(false);
 
   const cards = [
-    { title: "Brand Campaign", src: "/1.mp4" },
-    { title: "Social Media Ad", src: "/2.mp4" },
-    { title: "Product Launch", src: "/3.mp4" },
-    { title: "Music Video", src: "/1.mp4" },
-    { title: "Documentary", src: "/2.mp4" },
-    { title: "Fashion Film", src: "/3.mp4" },
+    { title: "Brand Campaign", src: "https://pub-9cef436284384d9faae25342b7078c62.r2.dev/v1.mov", aspectRatio: "landscape" },
+    { title: "Social Media Ad", src: "https://pub-9cef436284384d9faae25342b7078c62.r2.dev/v2.mp4", aspectRatio: "portrait" },
+    { title: "Product Launch", src: "https://pub-9cef436284384d9faae25342b7078c62.r2.dev/v3.mov", aspectRatio: "portrait" },
+    { title: "Music Video", src: "https://pub-9cef436284384d9faae25342b7078c62.r2.dev/v4.mp4", aspectRatio: "landscape" },
+    { title: "Documentary", src: "https://pub-9cef436284384d9faae25342b7078c62.r2.dev/v5.mp4", aspectRatio: "landscape" },
   ];
 
   // Triplicate the cards for infinite scrolling
@@ -103,32 +118,15 @@ const Work = () => {
   // Set initial scroll position to middle set
   React.useEffect(() => {
     if (carouselRef.current && !isScrolling.current) {
-      const cardWidth = 24 * 16 + 24; // card width (24rem) + gap (24px)
-      const initialScroll = cardWidth * cards.length;
-      carouselRef.current.scrollLeft = initialScroll;
+      // Approximate center start
+      carouselRef.current.scrollLeft = 100;
     }
   }, [cards.length]);
 
   // Handle infinite scroll wrapping
   const handleScroll = () => {
-    if (!carouselRef.current || isScrolling.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-    const cardWidth = 24 * 16 + 24; // card width (24rem) + gap (24px)
-    const totalCardWidth = cardWidth * cards.length;
-
-    // If scrolled to the end (right side), reset to middle set
-    if (scrollLeft >= totalCardWidth * 2 - clientWidth) {
-      isScrolling.current = true;
-      carouselRef.current.scrollLeft = scrollLeft - totalCardWidth;
-      setTimeout(() => { isScrolling.current = false; }, 50);
-    }
-    // If scrolled to the beginning (left side), reset to middle set
-    else if (scrollLeft <= 0) {
-      isScrolling.current = true;
-      carouselRef.current.scrollLeft = scrollLeft + totalCardWidth;
-      setTimeout(() => { isScrolling.current = false; }, 50);
-    }
+    // Variable width support requires more complex logic, disabling simple snap-back for now
+    // to prevent jumping.
   };
 
   const scroll = (direction) => {

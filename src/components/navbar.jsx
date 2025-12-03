@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <NavbarComponent className="relative lg:fixed top-0 inset-x-0 mx-auto z-50">
+      <NavbarComponent className="relative lg:fixed top-0 inset-x-0 mx-auto z-[100]">
         <NavBody>
           <EdwhiskLogo scrolled={scrolled} />
           <div className="hidden lg:flex flex-row items-center justify-center space-x-8">

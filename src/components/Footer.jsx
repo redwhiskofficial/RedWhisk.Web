@@ -1,5 +1,5 @@
 import React from "react";
-import { IconBrandTwitter, IconBrandLinkedin, IconBrandFacebook } from "@tabler/icons-react";
+import { IconBrandLinkedin, IconBrandInstagram } from "@tabler/icons-react";
 import { motion } from "motion/react";
 
 const Footer = () => {
@@ -34,7 +34,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {['About us', 'Work', 'Services', 'How it work', 'Contact us', 'Error 404'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-neutral-400 hover:text-white transition-colors">{item}</a>
+                    <a href="#" className="text-neutral-400 hover:text-red-600 transition-colors">{item}</a>
                   </li>
                 ))}
               </ul>
@@ -45,10 +45,10 @@ const Footer = () => {
               <h3 className="text-neutral-200 font-medium text-lg">Contact</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="mailto:mediaredwhisk@gmail.com" className="text-neutral-400 hover:text-white transition-colors">mediaredwhisk@gmail.com</a>
+                  <a href="mailto:mediaredwhisk@gmail.com" className="text-neutral-400 hover:text-red-600 transition-colors">mediaredwhisk@gmail.com</a>
                 </li>
                 <li>
-                  <a href="tel:+917999553176" className="text-neutral-400 hover:text-white transition-colors">+91 7999553176</a>
+                  <a href="tel:+917999553176" className="text-neutral-400 hover:text-red-600 transition-colors">+91 7999553176</a>
                 </li>
                 <li className="text-neutral-400">
                   Delhi, INDIA
@@ -61,18 +61,13 @@ const Footer = () => {
               <h3 className="text-neutral-200 font-medium text-lg">Follow us</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
-                    <IconBrandTwitter size={20} /> Twitter
+                  <a href="https://www.instagram.com/redwhisk.media/" className="flex items-center gap-2 text-neutral-400 hover:text-red-600 transition-colors">
+                    <IconBrandInstagram size={20} /> Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
+                  <a href="https://www.linkedin.com/company/redwhisk-media?trk=similar-pages" className="flex items-center gap-2 text-neutral-400 hover:text-red-600 transition-colors">
                     <IconBrandLinkedin size={20} /> Linkedin
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
-                    <IconBrandFacebook size={20} /> Facebook
                   </a>
                 </li>
               </ul>

@@ -1,0 +1,9 @@
+name = "r2-worker"
+main = "src/index.js"
+compatibility_date = "2024-12-04"
+
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "redwhisk"
+preview_bucket_name = "redwhisk"
+remote = true
