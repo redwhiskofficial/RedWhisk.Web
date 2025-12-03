@@ -112,15 +112,23 @@ const Work = () => {
   // Triplicate the cards for infinite scrolling
   const infiniteCards = [...cards, ...cards, ...cards];
 
-  // Set initial scroll position to the first reel (index 1)
+  // Set initial scroll position to the middle reel (index 2)
   React.useEffect(() => {
     if (carouselRef.current && !isScrolling.current) {
-      // Find the first reel (index 1)
-      const reelIndex = 1;
+      // Find the middle reel (index 2)
+      const reelIndex = 2;
       const reelCard = carouselRef.current.children[reelIndex];
 
       if (reelCard) {
-        reelCard.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'instant' });
+        // Calculate position to center the card without scrolling the page
+        const container = carouselRef.current;
+        const cardLeft = reelCard.offsetLeft;
+        const cardWidth = reelCard.offsetWidth;
+        const containerWidth = container.offsetWidth;
+
+        const scrollPosition = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+        container.scrollLeft = scrollPosition;
       }
     }
   }, [cards.length]);
